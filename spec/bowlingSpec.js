@@ -18,5 +18,8 @@ it('can move on to another frame', function(){
 it('has a scorecard which stores up to 2 rolls', function(){
     expect(bowling.scoreCard).toEqual([0, 0]);
 })
+it('starts at first roll', function(){
+    expect(bowling.isFirstRoll()).toBe(true);
+})
 });
 
