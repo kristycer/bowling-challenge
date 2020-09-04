@@ -17,4 +17,7 @@ nowFrame(){
 isFirstRoll(){
     return this.firstRoll == true;
 }
+secondRoll(){
+ this.isFirstRoll() ? this.firstRoll = 2 : this.firstRoll = 1;
+}
 }

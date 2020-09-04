@@ -20,6 +20,11 @@ it('has a scorecard which stores up to 2 rolls', function(){
 })
 it('starts at first roll', function(){
     expect(bowling.isFirstRoll()).toBe(true);
-})
+});
+it('can move on to a second roll', function(){
+    bowling.secondRoll();
+    expect(bowling.isFirstRoll()).toBe(false);
+
+});
 });
 
