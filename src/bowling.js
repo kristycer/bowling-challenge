@@ -6,6 +6,8 @@ class Bowling {
          this.nowFrame = 1;
          this.scoreCard = [0, 0]
          this.firstRoll = true;
+         this.sumRolls = [];
+    
     }
 
 nextFrame(){
@@ -19,5 +21,15 @@ isFirstRoll(){
 }
 secondRoll(){
  this.isFirstRoll() ? this.firstRoll = 2 : this.firstRoll = 1;
+}
+// sumRolls(){
+
+// }
+addRollScore(){
+ this.addRollScore;
+ this.sumRolls; 
+}
+roll(){
+this.scoreCard === [2, 3]
 }
 }

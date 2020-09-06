@@ -1,7 +1,7 @@
 'use strict';
 
 describe('BowlingGame', function(){
-    var bowling;
+    let bowling;
 
 beforeEach(function(){
     bowling = new Bowling();
@@ -26,5 +26,13 @@ it('can move on to a second roll', function(){
     expect(bowling.isFirstRoll()).toBe(false);
 
 });
+// describe('scores', function(){
+//     it('gives a score after rolling', function(){
+//         bowling.isFirstRoll(2);
+//         bowling.secondRoll(3);
+//         bowling.scoreCard;
+//         expect(bowling.roll()).toEqual([2, 3]);
+//     })
+// })
 });
 
