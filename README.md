@@ -2,9 +2,9 @@
 Bowling Challenge
 =================
 
-## The Task
 
-**THIS IS NOT A BOWLING GAME, IT IS A BOWLING SCORECARD. DO NOT GENERATE RANDOM ROLLS. THE USER INPUTS THE ROLLS.**
+
+**THIS IS NOT A BOWLING GAME, IT IS A BOWLING SCORECARD**
 
 Count and sum the scores of a bowling game for one player (in JavaScript).
 
