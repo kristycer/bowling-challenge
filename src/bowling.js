@@ -1,49 +1,56 @@
 'use strict';
 
 var Bowling = function(){
-   this._score = 0;
-   this._frame = 1;
-   this._rollsThisFrame = 0;
- };
-// nextFrame(){
-// this.nowFrame += 1
-// }
-// nowFrame(){
-//     return this.nowFrame
-// }
-// isFirstRoll(){
-//     return this.firstRoll == true;
-// }
-// secondRoll(){
-//  this.isFirstRoll() ? this.firstRoll = 2 : this.firstRoll = 1;
-// }
-// // sumRolls(){
+   this._finalScore = 0;
+   this._rolls = [];
+   this._scores = [];
 
-// }
+ };
+
 Bowling.prototype.roll = function(rollScore){
-   if (rollScore <= 10){
-     this._score += rollScore;
-     this._rollsThisFrame ++;
-     this.rollCounted();
-
-   } else {
-     throw 'Not allowed score';
-   };
+      if (rollScore > 10) throw 'Not allowed score';
+     this._rolls.push(rollScore);
+     this.rollDone(rollScore);
  };
 
- Bowling.prototype.score = function(){
-   return this._score;
+ Bowling.prototype.finalScore = function(){
+//    return this._finalScore;
+   var total = this._scores.reduce(function(a, b){
+         return a + b
+
+   });
+   return total;
  };
+
+//  Bowling.prototype.finalScore = function() {
+//   return this.throws.reduce(function(s, t){
+//     return s + t;
+//   }, 0);
+// }
+
+
+
 
  Bowling.prototype.frame = function(){
-     return this._frame;
+     return this._scores.length + 1;
 
  };
 
- Bowling.prototype.rollCounted = function(){
-     if (this._rollsThisFrame < 2 ){
-         this._rollsThisFrame ++;
+ Bowling.prototype.rollDone = function(rollScore){
+//      console.log(this._rolls[this._rolls.length - 1]);
+
+     //normal game
+     if (rollScore == 10){
+            this._scores.push(rollScore);
+
+     // spare 
+     } else if (rollScore + this._rolls[this._rolls.length] === 10){
+        this._scores.push(rollScore);
+
+      // strike
      } else {
-         this._frame ++;
+       this._scores.push(rollScore);
      };
+
+// console.log
  };
