@@ -11,26 +11,25 @@ describe('Bowling scoresheet', function(){
     bowling = new Bowling
     
     });
-
-
  
+
 it('can move on to a second frame when strike', function(){
     bowling.roll(10);
     expect(bowling.frame()).toBe(2);
     });
 
-it('can move on to a second frame when normal game', function(){
-    bowling.roll(2);
-    bowling.roll(1);
-    expect(bowling.frame()).toBe(2);
-    });
+// it('can move on to a second frame when normal game', function(){
+//     bowling.roll(2);
+//     bowling.roll(1);
+//     expect(bowling.frame()).toBe(2);
+//     });
 
-it('can move on to a second frame when spare', function(){
-    bowling.roll(5);
-    bowling.roll(5);
-    expect(bowling.frame()).toBe(2);
-    });
-});
+// it('can move on to a second frame when spare', function(){
+//     bowling.roll(5);
+//     bowling.roll(5);
+//     expect(bowling.frame()).toBe(2);
+//     });
+ });
 
 
     describe('score', function(){

@@ -1,9 +1,11 @@
 'use strict';
 
 var Bowling = function(){
+ 
    this._finalScore = 0;
    this._rolls = [];
    this._scores = [];
+   this._frames = [];
 
  };
 
@@ -22,12 +24,17 @@ Bowling.prototype.roll = function(rollScore){
    return total;
  };
  Bowling.prototype.frame = function(){
-     return this._scores.length + 1;
 
+       return this._scores.length + 1;
+       
+ 
  };
-
+Bowling.prototype.finalFrame = function(){
+    var total = this._frames.reduce(function(x, y){
+             return x + y
+       });  
+}
  Bowling.prototype.rollDone = function(rollScore){
-//    
 
      //normal game
      if (rollScore == 10){
@@ -41,4 +48,5 @@ Bowling.prototype.roll = function(rollScore){
      } else {
        this._scores.push(rollScore);
      };
+   
  };
