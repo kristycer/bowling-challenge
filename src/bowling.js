@@ -21,23 +21,13 @@ Bowling.prototype.roll = function(rollScore){
    });
    return total;
  };
-
-//  Bowling.prototype.finalScore = function() {
-//   return this.throws.reduce(function(s, t){
-//     return s + t;
-//   }, 0);
-// }
-
-
-
-
  Bowling.prototype.frame = function(){
      return this._scores.length + 1;
 
  };
 
  Bowling.prototype.rollDone = function(rollScore){
-//      console.log(this._rolls[this._rolls.length - 1]);
+//    
 
      //normal game
      if (rollScore == 10){
@@ -51,6 +41,4 @@ Bowling.prototype.roll = function(rollScore){
      } else {
        this._scores.push(rollScore);
      };
-
-// console.log
  };

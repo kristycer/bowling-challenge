@@ -20,8 +20,8 @@ it('can move on to a second frame when strike', function(){
     });
 
 it('can move on to a second frame when normal game', function(){
-    bowling.roll(3);
     bowling.roll(2);
+    bowling.roll(1);
     expect(bowling.frame()).toBe(2);
     });
 
@@ -48,9 +48,9 @@ it('can display a score from a single roll', function(){
     });
 
 it('can display a score from a normal game', function(){
-    bowling.roll(3);
-    bowling.roll(2)
-    expect(bowling.finalScore()).toBe(5);
+    bowling.roll(2);
+    bowling.roll(1)
+    expect(bowling.finalScore()).toBe(3);
     
     });
 
